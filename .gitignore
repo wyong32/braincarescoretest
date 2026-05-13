@@ -1,0 +1,6 @@
+.codex/
+.vercel/
+node_modules/
+npm-debug.log*
+server.out.log
+server.err.log

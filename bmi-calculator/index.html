@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BMI Calculator | Body Mass Index for Brain Care Score</title>
+  <meta name="description" content="Calculate your BMI with US or metric units. Use your body mass index result to answer the BMI question in the Brain Care Score test.">
+  <link rel="canonical" href="https://braincarescoretest.com/bmi-calculator/">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../logo.svg" alt="" width="34" height="34"><span>Brain Care Score Test</span></a>
+      <div class="nav-links">
+        <a href="../about-brain-care-score/index.html">About</a>
+        <a href="../guides/index.html">Guides</a>
+        <a href="../medical-disclaimer/index.html">Medical Disclaimer</a>
+        <a href="../privacy-policy/index.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+  <main class="section article">
+    <p class="eyebrow">Local tool</p>
+    <h1>BMI Calculator</h1>
+    <p class="subhead">Calculate your BMI in your browser, then use the result to answer the Body Mass Index question in the Brain Care Score test.</p>
+    <div class="notice">This calculator is for informational purposes only. BMI is a screening measure and does not replace medical advice.</div>
+
+    <form class="content-card calculator-form" data-bmi-form>
+      <div class="unit-toggle" role="tablist" aria-label="BMI calculator units">
+        <button type="button" class="is-active" data-unit-button="us" aria-selected="true">US units</button>
+        <button type="button" data-unit-button="metric" aria-selected="false">Metric units</button>
+      </div>
+
+      <div data-unit-panel="us">
+        <div class="field-grid">
+          <div class="field">
+            <label for="height-feet">Height feet</label>
+            <input id="height-feet" name="feet" type="number" min="0" step="1" inputmode="numeric" placeholder="5">
+          </div>
+          <div class="field">
+            <label for="height-inches">Height inches</label>
+            <input id="height-inches" name="inches" type="number" min="0" max="11" step="1" inputmode="numeric" placeholder="8">
+          </div>
+        </div>
+        <div class="field">
+          <label for="weight-pounds">Weight pounds</label>
+          <input id="weight-pounds" name="pounds" type="number" min="1" step="0.1" inputmode="decimal" placeholder="160">
+        </div>
+      </div>
+
+      <div data-unit-panel="metric" hidden>
+        <div class="field-grid">
+          <div class="field">
+            <label for="height-cm">Height centimeters</label>
+            <input id="height-cm" name="centimeters" type="number" min="1" step="0.1" inputmode="decimal" placeholder="173">
+          </div>
+          <div class="field">
+            <label for="weight-kg">Weight kilograms</label>
+            <input id="weight-kg" name="kilograms" type="number" min="1" step="0.1" inputmode="decimal" placeholder="72.5">
+          </div>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button type="submit">Calculate BMI</button>
+        <a class="button secondary" href="../index.html#test">Return to the Brain Care Score test</a>
+      </div>
+      <section class="bmi-result" data-bmi-result aria-live="polite">
+        <p class="eyebrow">Your BMI</p>
+        <span class="bmi-number" data-bmi-value>0.0</span>
+        <p data-bmi-category></p>
+        <p class="hint">Use this number to select the matching BMI range in the Brain Care Score questionnaire.</p>
+      </section>
+    </form>
+
+    <section class="section article-section" aria-labelledby="bmi-categories">
+      <h2 id="bmi-categories">Adult BMI Categories</h2>
+      <p>BMI categories are commonly used as a screening reference for adults. They do not diagnose health status, body composition, or disease risk for an individual person.</p>
+      <div class="bmi-table-wrap">
+        <table class="bmi-table">
+          <thead>
+            <tr>
+              <th scope="col">BMI range</th>
+              <th scope="col">Common category</th>
+              <th scope="col">Brain Care Score option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Below 18.5</td>
+              <td>Underweight</td>
+              <td>Lower than 18.5 kg/m2</td>
+            </tr>
+            <tr>
+              <td>18.5 to 24.9</td>
+              <td>Healthy weight range</td>
+              <td>18.5-25 kg/m2</td>
+            </tr>
+            <tr>
+              <td>25.0 to 29.9</td>
+              <td>Overweight range</td>
+              <td>25-29.9 kg/m2</td>
+            </tr>
+            <tr>
+              <td>30.0 or higher</td>
+              <td>Obesity range</td>
+              <td>Greater than 30 kg/m2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section article-section" aria-labelledby="bmi-formula">
+      <h2 id="bmi-formula">BMI Formula</h2>
+      <div class="content-grid">
+        <article class="content-card">
+          <h3>US units</h3>
+          <p><code>BMI = 703 x weight(lb) / height(in)^2</code></p>
+        </article>
+        <article class="content-card">
+          <h3>Metric units</h3>
+          <p><code>BMI = weight(kg) / height(m)^2</code></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section article-section" aria-labelledby="bmi-limits">
+      <h2 id="bmi-limits">What BMI Can and Cannot Tell You</h2>
+      <p>BMI is simple and useful for screening because it uses only height and weight. However, it does not directly measure body fat, muscle mass, waist circumference, fitness, age-related body changes, or medical history.</p>
+      <p>If your BMI result is unexpected, or if you have questions about weight, nutrition, medication, or chronic conditions, discuss it with a qualified health professional.</p>
+      <p><a class="button" href="../index.html#test">Use this BMI in the Brain Care Score test</a></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Independent, unofficial educational site. Not affiliated with Mass General Hospital.</span>
+      <div class="footer-links"><a href="../bmi-calculator/index.html">BMI Calculator</a><a href="../medical-disclaimer/index.html">Medical Disclaimer</a><a href="../privacy-policy/index.html">Privacy Policy</a></div>
+    </div>
+  </footer>
+  <script>
+    const form = document.querySelector("[data-bmi-form]");
+    const result = document.querySelector("[data-bmi-result]");
+    const value = document.querySelector("[data-bmi-value]");
+    const category = document.querySelector("[data-bmi-category]");
+    const unitButtons = document.querySelectorAll("[data-unit-button]");
+    const unitPanels = document.querySelectorAll("[data-unit-panel]");
+    let activeUnit = "us";
+
+    unitButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeUnit = button.dataset.unitButton;
+        unitButtons.forEach((item) => {
+          const selected = item === button;
+          item.classList.toggle("is-active", selected);
+          item.setAttribute("aria-selected", String(selected));
+        });
+        unitPanels.forEach((panel) => {
+          panel.hidden = panel.dataset.unitPanel !== activeUnit;
+        });
+        result.classList.remove("is-visible");
+      });
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      let bmi = 0;
+
+      if (activeUnit === "us") {
+        const feet = Number(data.get("feet") || 0);
+        const inches = Number(data.get("inches") || 0);
+        const pounds = Number(data.get("pounds") || 0);
+        const totalInches = feet * 12 + inches;
+        if (totalInches > 0 && pounds > 0) {
+          bmi = (pounds / (totalInches * totalInches)) * 703;
+        }
+      } else {
+        const centimeters = Number(data.get("centimeters") || 0);
+        const kilograms = Number(data.get("kilograms") || 0);
+        const meters = centimeters / 100;
+        if (meters > 0 && kilograms > 0) {
+          bmi = kilograms / (meters * meters);
+        }
+      }
+
+      if (bmi <= 0 || !Number.isFinite(bmi)) {
+        category.textContent = "Please enter a valid height and weight.";
+        value.textContent = "--";
+        result.classList.add("is-visible");
+        return;
+      }
+
+      value.textContent = bmi.toFixed(1);
+      category.textContent = bmi < 18.5
+        ? "This is below 18.5. Use the matching option in the Brain Care Score test and discuss your health context with a clinician."
+        : bmi < 25
+          ? "This is in the 18.5-25 range used by the Brain Care Score worksheet."
+          : bmi < 30
+            ? "This is in the 25-29.9 range used by the Brain Care Score worksheet."
+            : "This is greater than 30. Use the matching option in the Brain Care Score test and discuss your health context with a clinician.";
+      result.classList.add("is-visible");
+    });
+  </script>
+</body>
+</html>
