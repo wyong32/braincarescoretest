@@ -851,6 +851,18 @@ code {
   flex-wrap: wrap;
 }
 
+.footer-badge {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.footer-badge img {
+  display: block;
+  width: 169px;
+  height: 40px;
+}
+
 .skip-link {
   position: absolute;
   left: -999px;
